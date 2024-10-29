@@ -1,0 +1,43 @@
+{
+    "manifest_version": 2,
+    "name": "Social Media Content Filter",
+    "version": "1.0",
+    "description": "Filter unwanted content from social media platforms",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "webRequest",
+      "webRequestBlocking",
+      "https://*/",  // Allow requests to any HTTPS URL
+      "*://*.instagram.com/*",
+      "*://*.x.com/*",
+      "*://*.reddit.com/*"
+    ],
+    "background": {
+      "scripts": ["background.js"]
+    },
+    "browser_action": {
+      "default_popup": "popup.html"
+    },
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "social-media-filter@mydomain.com",
+        "strict_min_version": "57.0"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": [
+          "*://*.instagram.com/*",
+          "*://*.x.com/*",
+          "*://*.reddit.com/*"
+        ],
+        "js": ["content.js"]
+      }
+    ],
+    "icons": {
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  }
+  
