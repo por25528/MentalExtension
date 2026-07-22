@@ -1,5 +1,5 @@
 # MentalExtension (SafeGuard)
-
+"Built in 48 hours at Mental Health AI Hackathon 2024 — 1st place"
 > AI-powered browser extension that reduces online hate speech and cyberbullying by filtering harmful comments on social media.
 
 ## Background
